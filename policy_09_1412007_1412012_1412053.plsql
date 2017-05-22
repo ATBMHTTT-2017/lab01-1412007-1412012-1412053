@@ -327,7 +327,16 @@ WHERE MADA = 'DA003';
 --** Gán lebel cho tài kho?n	  						  		            **
 --**************************************************************
 
-
+BEGIN
+sa_user_admin.set_user_labels
+(policy_name => 'ACCESS_DuAn',
+user_name => 'TCN002',
+max_read_label => 'BMC:NS,KT,KH:TCT',
+max_write_label => 'BMC:NS,KT,KH:HN',
+min_write_label => 'TT',
+def_label => 'BMC:NS,KT,KH:TCT',
+row_label => 'BMC:NS,KT,KH:TCT');
+END;
 
 
 
