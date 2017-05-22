@@ -1,3 +1,3 @@
 alter session set "_ORACLE_SCRIPT"=true;
 
-grant select, insert, update on dbaDuAn.duan to roleTRUONGPHONG;
+grant insert, update on dbaDuAn.duan to roleTRUONGPHONG;
