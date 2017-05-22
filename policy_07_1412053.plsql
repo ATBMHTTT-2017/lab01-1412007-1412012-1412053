@@ -23,8 +23,8 @@ begin dbms_rls.add_policy(
   update_check => true);
 end;
 
-GRANT select, insert, update, delete on dbaDuAn.ChiTieu TO TDA001;
-GRANT select, insert, update, delete on dbaDuAn.ChiTieu TO TDA002;
-GRANT select, insert, update, delete on dbaDuAn.ChiTieu TO TDA003;
-GRANT select, insert, update, delete on dbaDuAn.ChiTieu TO TDA004;
-GRANT select, insert, update, delete on dbaDuAn.ChiTieu TO TDA005;
+GRANT select, insert on dbaDuAn.ChiTieu TO TDA001;
+GRANT select, insert on dbaDuAn.ChiTieu TO TDA002;
+GRANT select, insert on dbaDuAn.ChiTieu TO TDA003;
+GRANT select, insert on dbaDuAn.ChiTieu TO TDA004;
+GRANT select, insert on dbaDuAn.ChiTieu TO TDA005;
