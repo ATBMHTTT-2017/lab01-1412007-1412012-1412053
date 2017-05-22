@@ -34,6 +34,8 @@ grant execute on char_to_label to QLDA;
 -- END: C?p quy?n th?c thi trên các hàm dùng khi qu?n l? label
 
 
+
+
 --**************************************************************
 --** T?o label				  								                      **
 --** Level: Thông thý?ng, TT, 1							                  **
@@ -265,6 +267,65 @@ END;
 UPDATE dbaDuAn.duan SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:NS:HN');
 UPDATE dbaDuAn.duan SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:KT:HN');
 UPDATE dbaDuAn.duan SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:KH:HN');
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:KH:HCM') 
+WHERE MADA = 'DA001';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:KH:HCM')
+WHERE MADA = 'DA001';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:KH:HCM')
+WHERE MADA = 'DA001';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:KH:DN') 
+WHERE MADA = 'DA003';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:KH:DN')
+WHERE MADA = 'DA003';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:KH:DN')
+WHERE MADA = 'DA003';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'TT:KH:HCM')
+WHERE MADA = 'DA001';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'TT:KH:HCM')
+WHERE MADA = 'DA001';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'TT:KH:HN') 
+WHERE MADA = 'DA002';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'TT:KH:HN')
+WHERE MADA = 'DA002';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'TT:KH:HN')
+WHERE MADA = 'DA003';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'TT:KH:DN') 
+WHERE MADA = 'DA003';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'TT:KH:DN')
+WHERE MADA = 'DA003';
+
+UPDATE dbaDuAn.duan 
+SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'TT:KH:DN')
+WHERE MADA = 'DA003';
+--**************************************************************
+--** Gán lebel cho tài kho?n	  						  		            **
+--**************************************************************
 
 
 
