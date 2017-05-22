@@ -5,7 +5,7 @@
 Thành viên:
 * [ ] **1412007** Lê Mỹ Anh (tên tài khoản github)
 * [ ] **1412012** Nguyễn Phúc Anh (tên tài khoản github)
-* [ ] **1412053** Nguyễn Huyền Quý Châu (tên tài khoản github)
+* [ ] **1412053** Nguyễn Huyền Quý Châu (quychau1412053)
 
 ## Yêu cầu
 
