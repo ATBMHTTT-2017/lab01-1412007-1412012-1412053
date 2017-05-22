@@ -1,5 +1,5 @@
 --**************************************************************
---** T?o policy truy xu?t v‡o b?ng d? ·n					            **
+--** T?o policy truy xu?t v√†o b?ng d? √°n					            **
 --** policy_name: Access_DuAn							                    **
 --** column_name: OLS_DuAn									                  **
 --**************************************************************
@@ -11,41 +11,41 @@ end;
 
 --**************************************************************
 --** C?p role qu?n tr? cho policy Access_DuAn				          **
---** user: QLDA	(Qu?n l? d? ·n)								                **
+--** user: QLDA	(Qu?n l? d? √°n)								                **
 --**************************************************************
---G·n role Access_DuAn_dba cho t‡i kho?n 
+--G√°n role Access_DuAn_dba cho t√†i kho?n 
 grant Access_DuAn_dba to QLDA;
 
--- START: C?p quy?n th?c thi trÍn c·c h‡m d˘ng khi qu?n l? label
--- Quy?n s? d?ng c·c h‡m qu?n l? label, compartment, group
+-- START: C?p quy?n th?c thi tr√™n c√°c h√†m d√πng khi qu?n l? label
+-- Quy?n s? d?ng c√°c h√†m qu?n l? label, compartment, group
 grant execute on sa_components to QLDA;
 
--- Quy?n t?o c·c label
+-- Quy?n t?o c√°c label
 grant execute on sa_label_admin to QLDA;
 
--- Quy?n g·n policy cho b?ng
+-- Quy?n g√°n policy cho b?ng
 grant execute on sa_policy_admin to QLDA;
 
--- Quy?n g·n label cho t‡i kho?n
+-- Quy?n g√°n label cho t√†i kho?n
 grant execute on sa_user_admin to QLDA;
 
--- Chuy?n chu?i th‡nh s? c?a label
+-- Chuy?n chu?i th√†nh s? c?a label
 grant execute on char_to_label to QLDA;
--- END: C?p quy?n th?c thi trÍn c·c h‡m d˘ng khi qu?n l? label
+-- END: C?p quy?n th?c thi tr√™n c√°c h√†m d√πng khi qu?n l? label
 
 
 --**************************************************************
 --** T?o label				  								                      **
---** Level: ThÙng th˝?ng, TT, 1							                  **
+--** Level: Th√¥ng th√Ω?ng, TT, 1							                  **
 --** 		Gi?i h?n, GH, 2						  			                    **
---**        BÌ m?t, BM, 3							  		                  **
---** 		BÌ m?t cao, BMC, 4							                      **
---** Group: T?ng cÙng ty, TCT, 400							              **
---** 		H‡ N?i, HN, 300, TCT						  	                  **
---** 		H? ChÌ Minh, HCM, 200, HN						                  **
---**        –‡ N?ng, DN, 100							  	                **
---** COMPARTMENT: Nh‚n s?, NS, 30							                **
---** 			  K? to·n, KT, 20						  	                    **
+--**        B√≠ m?t, BM, 3							  		                  **
+--** 		B√≠ m?t cao, BMC, 4							                      **
+--** Group: T?ng c√¥ng ty, TCT, 400							              **
+--** 		H√† N?i, HN, 300, TCT						  	                  **
+--** 		H? Ch√≠ Minh, HCM, 200, HN						                  **
+--**        √ê√† N?ng, DN, 100							  	                **
+--** COMPARTMENT: Nh√¢n s?, NS, 30							                **
+--** 			  K? to√°n, KT, 20						  	                    **
 --** 			  K? ho?ch, KH, 10   						                    **
 --**************************************************************
 -- T?o level
@@ -248,7 +248,7 @@ sa_label_admin.create_label(
 END;
 
 --**************************************************************
---** G·n policy cho b?ng	  						  		                **
+--** G√°n policy cho b?ng	  						  		                **
 --**************************************************************
 BEGIN
 sa_policy_admin.apply_table_policy(
@@ -260,9 +260,11 @@ sa_policy_admin.apply_table_policy(
 END;
 
 --**************************************************************
---** G·n nh?n cho d? li?u	  						  		                **
+--** G√°n nh?n cho d? li?u	  						  		                **
 --**************************************************************
 UPDATE dbaDuAn.duan SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:NS:HN');
+UPDATE dbaDuAn.duan SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:KT:HN');
+UPDATE dbaDuAn.duan SET OLS_DuAn = char_to_label('ACCESS_DuAn', 'BMC:KH:HN');
 
 
 
